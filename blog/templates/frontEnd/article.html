@@ -1,0 +1,29 @@
+{% extends 'frontEnd/base.html' %}
+
+
+{% block content%}
+
+<div class="col-xs-8">
+
+
+			<div class="row">
+				<div class="col-xs-10 grey">
+					<h2 class=portfolioTittle><a href="{% url 'article_view' contenido.slug %}">{{contenido.titulo}}</a></h2>
+
+				  	<p class="description">{% autoescape off %}{{ contenido.texto }}{% endautoescape %}</p>
+
+				</div>
+			</div>
+
+		</div>
+		<div class="col-xs-4">
+            <ul  class="portfolio list-unstyled carousel">
+                {% for o in op %}
+                <li id="{{ o.id }}" class="otros-articulos">
+                   <a href="{% url 'article_view' o.slug %}">{{ o.titulo }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+		</div>
+
+{% endblock %}

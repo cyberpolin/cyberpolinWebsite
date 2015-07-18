@@ -1,0 +1,13 @@
+<div class="portfolioExtra row">
+    <div ng-show="job.job.clientComment">
+        <div class="clientPhoto"><span>{{ job.job.photoAlt</span></div>
+        <div class="col-xs-9 col-md-7 chat-content">
+          <!-- In meta area, first include "name" and then "time" -->
+
+          <div class="chat-meta">{{ job.job.clientName }}</div>
+          {{ job.job.clientComment }}
+          <div class="clearfix"></div>
+        </div>
+    </div>
+    <a class="col-xs-2 col-md-1 fa fa fa-link" href="{{job.job.link}}">{{job.job.linkName}}</a>
+</div>

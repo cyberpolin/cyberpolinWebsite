@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="page-header">
+    <h1>
+        Articulos
+        <small>
+            <i class="ace-icon fa fa-angle-double-right"></i>
+            Agregar articulos
+        </small>
+    </h1>
+</div>
+    {% include 'error.html' %}
+    <div class="row">
+        <div class="col-md-8">
+            <form action="" id="editor-form" class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p}}
+                {{ form.errors }}
+                <input type="submit" value="Publicar" name="Publicar">
+            </form>
+        </div>
+        <div class="col-md-4">
+            {% include 'base_gallery.html' %}
+            {% include 'base_widget.html' %}
+
+        </div>
+    </div>
+{% endblock %}

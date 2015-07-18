@@ -1,0 +1,17 @@
+Terminar el modulo de eliminar
+	> Consumir de un servicio palabras en ingles para practicar ortografía :)
+		De preferencia sacar palabras de blogs de desarrollo, crear un api o conseguir uno :)
+		Posibilidad de usarlo como capTcha, es decir hacer una imagen  :o
+
+
+HAcer el modulo de edición
+
+
+
+MEJORAS DE CONDIGO
+
+	base.html >267 : Hacer referencia a la vista y no la url hardcodeada
+
+
+
+Hacer Ventana para CMAIG

@@ -1,0 +1,31 @@
+{% extends 'frontEnd/base.html' %}
+
+
+{% block content%}
+
+<div class="col-xs-8">
+
+
+			<div class="row">
+				<div class="col-xs-10 grey">
+					<h2 class=portfolioTittle><a href="#">{{contenido.titulo}}</a></h2>
+
+				  	<p class="description">{% autoescape off %}{{ contenido.texto }}{% endautoescape %}</p>
+
+				</div>
+			</div>
+
+		</div>
+<div class="col-xs-4">
+				<ul  class="portfolio list-unstyled carousel">
+                    {% for proyecto in portfolio %}
+					<li>
+                        <a href="#" class="carga_proyecto" id="{{ proyecto.id }}">
+                            <img src="{{ proyecto.img }}" alt="{{ proyecto.title }}"/>
+                        </a>
+                    </li>
+                    {% endfor %}
+				</ul>
+		</div>
+
+{% endblock %}

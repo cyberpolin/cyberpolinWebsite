@@ -1,0 +1,19 @@
+#Archivos pre-compilados
+.pyc
+
+# Distribution / packaging
+.Python
+bin/
+include/
+lib/
+psycopg2-2.6/
+src/
+
+# Django stuff:
+*.log
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/

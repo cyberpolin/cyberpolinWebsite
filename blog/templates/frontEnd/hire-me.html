@@ -1,0 +1,28 @@
+{% extends 'frontEnd/base.html' %}
+
+
+{% block content%}
+
+<div class="col-xs-12 grey">
+
+	<h2 class=portfolioTittle>Cool, you are intersted !!</h2>
+
+	  	<p class="description">Please let me know who you are, i'll get in touch with you as soon as i can. :)</p>
+
+	  	<form action="/hire-me-do/" method = "POST">
+	  		{% csrf_token %}
+	  		<input class="input" name='name' placeholder= 'Whats your name?'></br>
+	  		<input class="input" name='email' placeholder= "I'll need your e-mail to...">
+	  		</br>
+	  		<textarea class="input" name='mail' placeholder= 'Please describe in a few lines what is your project about. ;)'></textarea>
+	  		<input class="input" type="submit" name = "hireme" value="Hire Me ! ! !" >
+	  	
+	  	</form>
+
+  	<p>Or you can contact me via twitter, linked in, facebook, or github.</p>
+  	<i style="text-align: center;display: block;" class="fa fa-hand-o-down fa-lg"></i>
+
+</div>
+		
+
+{% endblock %}

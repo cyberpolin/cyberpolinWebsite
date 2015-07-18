@@ -1,0 +1,77 @@
+<div class="widget-box">
+    <div class="widget-header">
+        <h5 class="widget-title">Galeria de Imagenes</h5>
+
+        <!-- #section:custom/widget-box.toolbar -->
+        <div class="widget-toolbar">
+            <div class="widget-menu">
+                <a href="#" data-action="settings" data-toggle="dropdown">
+                    <i class="ace-icon fa fa-bars"></i>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-right dropdown-light-blue dropdown-caret dropdown-closer">
+                    <li>
+                        <a data-toggle="tab" href="#dropdown1">Option#1</a>
+                    </li>
+
+                    <li>
+                        <a data-toggle="tab" href="#dropdown2">Option#2</a>
+                    </li>
+                </ul>
+            </div>
+
+            <a href="#" data-action="fullscreen" class="orange2">
+                <i class="ace-icon fa fa-expand"></i>
+            </a>
+
+            <a href="#" data-action="reload">
+                <i class="ace-icon fa fa-refresh"></i>
+            </a>
+
+            <a href="#" data-action="collapse">
+                <i class="ace-icon fa fa-chevron-up"></i>
+            </a>
+
+            <a href="#" data-action="close">
+                <i class="ace-icon fa fa-times"></i>
+            </a>
+        </div>
+
+        <!-- /section:custom/widget-box.toolbar -->
+    </div>
+
+    <div class="widget-body">
+        <div class="widget-main">
+            <ul class="ace-thumbnails clearfix">
+           {% for img in media %}
+
+               <li>
+                   <a href="#" data-rel="colorbox" class="cboxElement">
+                       <img width="130" height="130" alt="{{ img.title }}" src="/static/{{ img.date|date:"Y/m" }}/{{ img.file }}">
+                        <div class="tags">
+                            <!-- #section:pages/gallery.tags -->
+                            <span class="label-holder" >
+                                <span class="label label-info arrowed">use</span>
+                            </span>
+
+                            <span class="label-holder">
+                                <span class="label label-danger">recreation</span>
+                            </span>
+
+                            <!-- /section:pages/gallery.tags -->
+                        </div>
+                    </a>
+
+                    <div class="tools tools-left">
+                        <a href="#" onclick="add_html($(this).parent().parent().find('img'))">
+                            <i class="ace-icon fa fa-arrow-circle-o-left"></i>
+                        </a>
+                    </div>
+                </li>
+
+           {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+[{
+		"title" 	: "Travel Agency CMS and SEO",
+		"thumbnail" : "creaturviajes-cyberpolin-php-developer-thumb.jpg",
+		"photo"		: "creaturviajes-cyberpolin-php-developer.jpg", 
+		"productAlt":"Creatur Viajes recommend Carlos as a Wordpress Developer",
+		"description": "This travel agency needed website in which they have the ability to upload their own information, besides they needed to improve the SEO of the site.<br>As a first aproach we decide to wordpress it so they could edit their own content, later we decided to develope some plug ins and some other theme stuff to get a unique image and feeling on site.After all this, the travel agency improve dramatically the website hits, besides they own the content of the site so they don't need some IT guy to upload changes.",
+		"linkName"	: "creaturviajes.com",
+		"link"		: "http://creaturviajes.com",
+		"clientName": "Carlos Martinez",
+		"clientComment": "Carlos help us to have a bigger picture of what web development can be...", 
+		"clientFoto": "cmartinez.jpg"    
+	},
+	{
+		"title" 	: "Local Fair Web Site",
+		"thumbnail" : "feria-tabasco-cyberpolin-wordpress-developer-thumb.jpg",
+		"photo"		: "feria-tabasco-cyberpolin-wordpress-developer.jpg", 
+		"productAlt":"cyberpolin, lead the team who develope the site of La Feria Tabasco",
+		"description": "Tabasco fair is the most important festivity in our state, past years the website was flat, this year Tabasco state Government ask me to make a dinamic site whit responsive design, and an app for both IOS and Android, as a result we smash last year visits and for the first time ever Tabasco Feria had an mobile app.",
+		"linkName"	: "feria.tabasco.gob.mx",
+		"link"		: "http://feria.tabasco.gob.mx"    
+	},
+	{
+		"title" 	: "Bussines Digital Directory",
+		"thumbnail" : "guatao-thumb.png",
+		"photo"		: "guatao.png", 
+		"productAlt":"cyberpolin, lead a joung team of developers in to the development of this web app",
+		"description": "Maded in Django, guatao is a job source for independent salers, and a great oportunity for bussines people in Tabasco. <br> Later, cyberpolin and his team are planning in develope the mobile app.",
+		"linkName"	: "guatao.mx",
+		"link"		: "http://guatao.mx"
+	}]

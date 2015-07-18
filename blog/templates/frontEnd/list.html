@@ -1,0 +1,30 @@
+{% extends 'frontEnd/base.html' %}
+
+
+{% block content%}
+
+<div class="col-xs-8">
+
+            {% for articulo in contenido %}
+			<div class="row">
+				<div class="col-xs-10 grey">
+					<h2 class=portfolioTittle><a href="{% url 'article_view' articulo.slug %}">{{articulo.titulo}}</a></h2>
+
+				  	<p class="description">{% autoescape off %}{{ articulo.texto }}{% endautoescape %}</p>
+
+				</div>
+			</div>
+            {% endfor %}
+		</div>
+		<div class="col-xs-4">
+            <ul  class="portfolio list-unstyled carousel">
+                {% for tip in tips %}
+                <li id="{{ tip.id }}">
+                    Did you know a {{ tip.titulo }} ?
+                    <p>{% autoescape off %}{{ tip.texto }}{% endautoescape %}</p>
+                </li>
+                {% endfor %}
+            </ul>
+		</div>
+
+{% endblock %}

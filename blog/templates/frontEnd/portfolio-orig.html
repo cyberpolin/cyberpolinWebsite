@@ -1,0 +1,82 @@
+{% load static %}
+{% static "" as basStatic %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Django, Front End Developer - CAGV</title>
+	<link rel="stylesheet" type="text/css" href="/static/assets/css/jquery.vegas.min.css" />
+	<link rel="stylesheet" type="text/css" href="/static/assets/css/bootstrap.min.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/static/assets/css/cyberpolin.css" />
+</head>
+<body>
+<!--
+<div class="container">
+	<div class="row">
+		<div class="col-xs-1">1</div>
+		<div class="col-xs-1">2</div>
+		<div class="col-xs-1">3</div>
+		<div class="col-xs-1">4</div>
+		<div class="col-xs-1">5</div>
+		<div class="col-xs-1">6</div>
+		<div class="col-xs-1">7</div>
+		<div class="col-xs-1">8</div>
+		<div class="col-xs-1">9</div>
+		<div class="col-xs-1">0</div>
+		<div class="col-xs-1">1</div>
+		<div class="col-xs-1">2</div>
+	</div>
+</div>-->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+  <div class="container">
+  	<ul class="nav navbar-nav">
+		<li><a href="/">Home</a></li>
+		<li><a href="/portfolio.html">Portfolio</a></li>
+		<li><a href="#/blog/">Blog</a></li>
+		<li><a href="#/hire-me.html">Hire Me</a></li>
+	</ul>
+  </div>
+</nav> 
+<div class="container wrapper">
+
+	<div class="row" ng-controller="JobController as job">
+		<div class="col-xs-8">
+			<div class="row">
+				<div class="col-xs-10 grey">
+					<h2 class=portfolioTittle>{{job.job.title}}</h2>
+	  	
+				  	<p ng-bind-html="job.job.description" class="description"></p>
+					<div class="portfolioExtra row">
+						<div ng-show="job.job.clientComment">
+							<div class="clientPhoto"><span>{{ job.job.photoAlt</span></div>
+							<div class="col-xs-9 col-md-7 chat-content">
+					          <!-- In meta area, first include "name" and then "time" -->
+					          
+					          <div class="chat-meta">{{ job.job.clientName }}</div>
+					          {{ job.job.clientComment }}
+					          <div class="clearfix"></div>
+				          	</div>
+				        </div>
+					  	<a class="col-xs-2 col-md-1 fa fa fa-link" href="{{job.job.link}}">{{job.job.linkName}}</a>	
+					</div>	
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-4">
+				<ul  class="portfolio list-unstyled carousel">
+					<li ng-click="job.selectJob(djob)" ng-repeat="djob in job.products"><a href="#"><img ng-src ="/img/portfolio/{{djob.thumbnail}}" alt="{{djob.title}}"/></a></li>
+				</ul>
+		</div>		
+	</div>
+	
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/static/assets/js/jquery.vegas.min.js"></script>
+<script type="text/javascript" src="/static/assets/js/cyberpolin.js"></script>
+</body>
+</html>
