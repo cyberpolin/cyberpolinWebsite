@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans|Lobster' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  <title>Cyberpolin's blog - What you need to know about css, and styling html</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="home"><a href="http://cyberpolin.github.io/">Home</a></li>
+      <li class="about-me"><a href="../about.html">About me</a></li>
+      <li class="blog"><a href="http://cyberpolin.github.io/blog/index.html">Blog</a></li>
+      <li class = "latest-work"><a href="#">Latest Work</a></li>
+    </ul>
+    <span id="social-icons">
+      <ul>
+        <li><a href="#"><i class="fa fa-github fa-lg"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin fa-lg"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
+        <li><a href="#"><i class="fa fa-facebook fa-lg"></i></a></li>
+      </ul>
+    </span>
+  </nav>
+  <h1>What  you need to know about css.</h1>
+  <h3>What is css?</h3>
+    <p>Cascade Style Sheet, is a good way to apply style (That means the look and feel) of your website, HTML was thinked for sharing information, not so much on formating information, besides that, it was thinked on text information, the most important thing on that time was to link one info page into another, and still is but what about styling?</p>
+    <p>Well, as the capabilities and bandwidth growth the way about displaying the information started to make more sense than ever, then the web was not just about static text, now we can interact with the user, with that idea the browsers started to add certains graphical options for displaying information.</p>
+    <p>That's why Css was created.</p>
+  <h3>Advantages about css</h3>
+    <p>The cool thing about using css is that makes you lazy, yeap laaaaaazzzyy. Imagine that you can write a bunch of HTML files and just one CSS for every one of them, it also helps you to keep an order between your site info and how does it looks.</p>
+    <p>So, imagine that you already have a really big site with hundreds of pages, then you realize that bottom doesn't work properly, you need to change it's color, now imagine how difficult it would be to change one page by one.</p>
+    <p>Now imagine you have a Css for that, you just have to change the color property for that bottom and all set. Nice right.</p>
+  <h3>The hard stuff</h3>
+    <p>Please, please help us understand how does position works...</p>
+    <p>When it comes to Css almost everything is easy, but understand position, is the real difference between a good front-end and a great front-end. The main difficult here is to understand what every position option work like so, i'll try to explain in for you.</p>
+
+  <h4>What is the difference fixed, static, absolute and relative?</h4>
+    <ul>
+      <li>Static</li>
+        <p>This is the position of the elements by default, and is pretty simple, with static all the elements in the page will have his natural behavior and they will stack one before of the other, if you need more information about this you will need to read about the difference between <a href="#">solid and inline elements.</a></p>
+      <li>Relative</li>
+        <p>This is one of the more used one, but not always in the right way, and that is because the position of the block thath use relative is (again) relative to itself, in other words, if a div originally is on the 100px horizontal, and 200px vertical, when we add a relative position and a top:10px, it will get know a 210px vertical. Got it?</p>
+      <li>Absolute</li>
+        <p>As it's name stand for, Absolute position would allow us to position any element in any place by using top, right, bottom and left properties, it only will be relative to a parent div.</p>
+      <li>Fixed</li>
+        <p>It's exactly like Absolute, but is relative to the viewport.</p>
+    </ul>
+
+    <h4>Any way... what's the viewport?</h4>
+    <p>The short answer is that the new port is the space the browser design for rendering a web page.</p>
+
+  <h4> What are the best practices associated with using
+classes vs. ids?</h4>
+  <p>When using Css by general rule use classes, it's almost impossible to need the use of ID's, besides ID's will be used more often in Javascript.</p>
+  <p>Another thing to have in mind is that when we declare Css we should declare first the tag selector and then the ID's, in last the classes even thoug those are the more used.</p>
+
+  </body>
+</html>

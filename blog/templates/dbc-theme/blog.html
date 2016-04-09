@@ -1,0 +1,24 @@
+{% extends 'dbc-theme/base.html' %}
+
+{% block content%}
+
+{% autoescape off %}
+
+  <ul id="blog-posts">
+
+   {% for articulo in contenido %}
+   <!-- Get month date fixed -->
+
+    <a alt="{{articulo.titulo}}" href="{% url 'article_view' articulo.slug %}">
+      <li>
+        <img src="/static/{{articulo.fecha.year}}/{{articulo.fecha|date:"m"}}/{{articulo.img}}" alt="math" height="300" width = "300">
+        <div class = "blog-title">
+          <h2>{{articulo.titulo}}</h2>
+        </div>
+      </li>
+    </a>
+   {% endfor %}
+ </ul>
+   {{ pagina.texto }}
+{% endautoescape %}
+{% endblock %}

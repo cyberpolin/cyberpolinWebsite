@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans|Lobster' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+<!-- Syntax highlight -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Syntax highlight -->
+  <title>Objects Classes & Instances the Ruby way</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="home"><a href="http://cyberpolin.github.io/">Home</a></li>
+      <li class="about-me"><a href="../about.html">About me</a></li>
+      <li class="blog"><a href="http://cyberpolin.github.io/blog/index.html">Blog</a></li>
+      <li class = "latest-work"><a href="#">Latest Work</a></li>
+    </ul>
+    <span id="social-icons">
+      <ul>
+        <li><a href="https://github.com/cyberpolin"><i class="fa fa-github fa-lg"></i></a></li>
+        <li><a href="https://mx.linkedin.com/in/cyberpolin
+"><i class="fa fa-linkedin fa-lg"></i></a></li>
+        <li><a href="https://twitter.com/cyberpolin"><i class="fa fa-twitter fa-lg"></i></a></li>
+        <li><a href="https://www.facebook.com/carlos.vasconcelos"><i class="fa fa-facebook fa-lg"></i></a></li>
+      </ul>
+    </span>
+  </nav>
+<main>
+  <h1>Objects Classes & Instances the Ruby way</h1>
+
+<p>We know that our world is made of a lot of things, everything is something in this world even the world itself is a thing in another thing call solar system the solar system itself is in the milky way and so on… The main idea is that all stuff in this world or are thing, and some things can be inside other things like a car.</p>
+
+<p>A car is a thing, a wheel is another thing living (sort of speak) inside a car, now i’m tired of the “thing” world, let's call it “object”, so a car is an object, a wheel is an object that lives in a car which is also an object, every object do stuff, for example a car moves_fordwar, ster_left, ster_right etc.</p>
+
+<p>The action an object can DO are method (what methods are?), i hope you’re getting where i’m going, so, let build this idea from bottom ups.</p>
+
+<p>In programing as in life que have stuff that DO stuff, like a variable which lives in a method, which lives in a object.</p>
+
+<pre><code class="ruby">
+  variables > method > Objects (they are really called class)
+</pre>
+
+<p>So anyway, everything is an object right? or a thing…</p>
+
+<h2>What Classes (objects) are  in ruby, and what can i use it for?</h2>
+
+<p>Imagine you want a car, that car will came of a “factory” a place where they have the tools and knowledge about how it’s done.</p>
+
+<p>That factory is a “class” (just follow me, you’ll get it”)</p>
+<pre><code class="ruby">
+  class Awsome_car
+    def initialize
+      puts "I'm a new car"
+    end
+
+    def advance
+      puts "Move 1km"
+    end
+
+    def steer_right
+      puts "Turn righ 45 degrees"
+    end
+
+    def steer_left
+      puts "Turn left 45 degrees"
+    end
+  end
+</pre>
+<p>So you instantiate a car from Car_Factory class.</p>
+<pre><code class="ruby">
+  my_car = Awsome_car.new
+  # I'm a new car
+</pre>
+<img src="../imgs/car-animation.gif" alt="car factory">
+
+<p>Now you have your own car cool right, and your car already have some stuff to do, try them.</p>
+
+<pre><code class="ruby">
+  my_car.advance
+  # Move 1km
+  my_car.advance
+  # Move 1km
+  my_car.turn_rigth
+  # Turn righ 45 degrees
+</pre>
+
+<p>So you see everything in life is an object, some objects can do stuff via methods, every method have variables, now variables can be accessed in its own methods.</p>
+
+<p>so let's keep with our car.</p>
+
+<h2>Variables in classes...</h2>
+
+<p>As i said a variable is accesible only inside the method it has been declared. So i want to add a Km every time the car advance</p>
+
+    <pre><code class="ruby">
+      def advance
+        km = 1
+        puts "Move #{km}km"
+      end
+    </pre>
+
+<p>Remember that a car must receive manntainance every 10 km (shush! our car does... :)</p>
+<p>We need a method that do this right?</p>
+
+    <pre><code class="ruby">
+      def odometer
+        total_km = total_km + km # This sould add the amount ok km runned by our car.
+      end
+    </pre>
+
+    <p>Does it worked?</p>
+    <p>Why?</p>
+    <p>odometer method can access advence km variable, that is why we can run our previous code, we need a instance variable so...
+    </p>
+
+    <pre><code class="ruby">
+  class Awsome_car
+    def initialize
+      @km = 0
+      puts "I'm a new car, i have #{@km} km"
+
+    end
+
+    def advance
+      @km = @km + 1
+      km = 1
+      puts "Move #{km}km"
+    end
+
+    def steer_right
+      puts "Turn righ 45 degrees"
+    end
+
+    def steer_left
+      puts "Turn left 45 degrees"
+    end
+
+    def odometer
+      puts "I have #{@km} in total"
+    end
+
+  end
+</pre>
+
+<p>Notice @km and km are to different variables, and two different kinds one, km is just a method variable, and the @km is an instance method,this is a variable available in a "instance" (copy) of the Awsome_card class</p>
+
+<p>Cooooooool!</p>
+
+</main>
+</body>
+</html>
