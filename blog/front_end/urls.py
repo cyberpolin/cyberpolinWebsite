@@ -6,7 +6,7 @@ from front_end.views import *
 
 urlpatterns = patterns("front_end.views",
     url(r'^$', 'index_view', name='index_view'),
-    url(r'^portfolio/$', portfolio_view, name='portfolio_view'),
+    url(r'^projects/$', portfolio_view, name='portfolio_view'),
     url(r'^hire-me/$', hire_me_view, name='blog_view'),
     url(r'^hire-me-do/$', send_mail_view, name='send_mail_view'),
     url(r'^blog/$', blog_view, name='blog_view'),

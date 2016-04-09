@@ -75,6 +75,7 @@ def list_portfolio_view(request):
     ctx['portfolio'] = p
     ctx['pubBorradas'] = Portfolio.objects.filter(status =False).count()
 
+
     return render(request, 'portfolio.html', ctx)
 
 def add_portfolio_view(request):

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans|Lobster' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/projects.css">
+<!-- Syntax highlight -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Syntax highlight -->
+  <title>Javascript and Ruby, classy languages.</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="home"><a href="http://cyberpolin.github.io/">Home</a></li>
+      <li class="about-me"><a href="../about.html">About me</a></li>
+      <li class="blog"><a href="http://cyberpolin.github.io/blog/index.html">Blog</a></li>
+      <li class = "latest-work"><a href="index.html">Latest Work</a></li>
+    </ul>
+    <span id="social-icons">
+      <ul>
+        <li><a href="#"><i class="fa fa-github fa-lg"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin fa-lg"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
+        <li><a href="#"><i class="fa fa-facebook fa-lg"></i></a></li>
+      </ul>
+    </span>
+  </nav>
+  <main contenteditable="">
+    <h1>Functional Programing the new paradigm?</h1>
+    <p>I'm sure you are wondering what's up with this new paradigm of development, how is this changing the way we do software, and let me tell you so do i.</p><p>At first i was going to write something really general about functional programing, i was going to write about it in programing as a activity, but after a lot of reading and researching, i got to the conclusion that wasn't so good idea, so i'll keep it simple and on the Ruby scope.</p>
+
+    <h2>So... what's functional programing?</h2>
+
+    It is just a paradigm focused on functions (as you could guess) but what is the difference between using a function as we know in Ruby and a functional programing function?<br><br>Functional programing is based on some rules...<br><ul>
+  <li>
+  Functions shoul NOT have side effects</li>
+  <li>Functions should be small and have small scope.</li>
+</ul><br>
+
+    <h3>Functions should not have side effects...</h3>
+    <p>So what does that mean?</p><p>Easy, whatever goes in a function should not affect anything outside that function.</p>
+    <pre class="compare"><code class="ruby">
+      # Classical function.
+      ary = ["one","two"]
+
+      def add_item(item, array)
+        array.push(item)
+      end
+
+      add_item("tree", ary)
+      puts ary # ["one","two", "tree"]
+    </code></pre>
+
+    <pre class="compare"><code class="ruby">
+      # functional function.
+      ary = ["one","two"]
+
+      def add_item(item, array)
+        new_array = array.dup
+        new_array.push(item)
+      end
+
+      add_item("tree", ary) # ["one","two", "tree"]
+      puts ary # ["one","two"]
+    </code></pre>
+
+    <p>As you can see, the "functional" one doesn't change anything outside itself, but still return the correct result. So in functional programing a function shouldn't have side effects, also <strong>if you call a function with the same values it should always return the same result.</strong></p>
+    <p>What would happend if we call again the classical one?</p>
+    <p>Try them in your irb...</p>
+
+    <h3>Functions should be small and have small scope....</h3>
+    <p>Yeah, that means do a function that do one thing not a lot of them</p>
+
+    <pre class="compare"><code class="ruby">
+      # Classical.
+      ary = ["HeLLo","hOw ArE YoU"]
+
+      def fix_string(array)
+        new_array = array.dup #This time we already know we shouldn't change array :)
+        #Downcase everything
+        for i in (0..new_array.length-1)
+          new_array[i] = new_array[i].downcase # This is changing an inside variable, so we are good
+        end
+        # Capitalize
+        for i in (0..new_array.length-1)
+          for x in (0..new_array[i].length-1)
+            if x == 0
+              new_array[i][x] = new_array[i][x].upcase
+            end
+
+          end
+        end
+        new_array
+      end
+
+      fix_string(ary)
+    </code></pre>
+
+    <pre class="compare"><code class="ruby">
+      # functional.
+      ary = ["HeLLo","hOw ArE YoU"]
+
+      def downcase_ary(array)
+        new_array = array.dup #This time we already know we shouldn't change array :)
+        #Downcase everything
+        for i in (0..new_array.length-1)
+          new_array[i] = new_array[i].downcase # This is changing an inside variable, so we are good
+        end
+        new_array
+      end
+
+      def capitalize_ary(array)
+        # Capitalize
+        new_array = array.dup #This time we already know we shouldn't change array :)
+        for i in (0..new_array.length-1)
+          for x in (0..new_array[i].length-1)
+            if x == 0
+              new_array[i][x] = new_array[i][x].upcase
+            end
+          end
+        end
+        new_array
+      end
+
+      def fix_string(array)
+        new_array = array.dup
+        new_array = downcase_ary(new_array)
+        new_array = capitalize_ary(new_array)
+        p new_array
+      end
+
+      fix_string(ary)
+    </code></pre>
+
+    <p>You see small single scope function, i know they are better ways to do this but it's for illustrative porpouses.</p>
+
+    <h3>Higher-order functions:</h3>
+    <p>The basic idea here is to use functions as arguments or return a function, so based ona the past example we can do this...</p>
+
+    <pre class="compare"><code class="ruby">
+      # Functional.
+      # ...
+
+      def fix_string(array)
+        new_array = array.dup
+        new_array = capitalize_ary(downcase_ary(new_array)) # Higher-order functions
+        p new_array
+      end
+
+      fix_string(ary)
+    </code></pre>
+    <p>So we have to start thinking funcitons in terms of what they do, and forget about how they do things, the idea es to program in this way.</p>
+
+    <h3>Recursion</h3>
+    <p>Recursion is a way of itering something, to make a loop with functions, in functional programing is a common practice, and it help us to think in what the code is doing stuff stead of how it does stuff.</p>
+
+    <h3>So.. is Ruby an Functional Programing language?</h3>
+    <p>No it is not, Ruby is a Object Oriented Programning language, but we can do functional programing in Ruby.</p>
+    <p>In fact one of the best things in Ruby are funcitonal programing oriented, do you remember enumerables?</p>
+    <p>That's right enumerables are functional programing "functions" the idea behind them is to be as tiny, functional and side efects free as you can be. </p>
+
+
+  </main>
+  <aside>
+    <h2>Who am i?</h2>
+    <p>Full Stack developer especialized in Ruby on Rails and Front end techniques.</p>
+    <h2>Other Projects</h2>
+    <ul>
+      <li><a href="#">Google I/O 2016 Extended Villahermosa</a></li>
+    </ul>
+    <h2>Related Posts</h2>
+    <ul>
+      <li>
+        <a href="#">Javascript VS Ruby?</a>
+      </li>
+    </ul>
+  </aside>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans|Lobster' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+<!-- Syntax highlight -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Syntax highlight -->
+  <title>Enumerable methods, looping on steroids - Cyberpolin's blog</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="home"><a href="http://cyberpolin.github.io/">Home</a></li>
+      <li class="about-me"><a href="../about.html">About me</a></li>
+      <li class="blog"><a href="http://cyberpolin.github.io/blog/index.html">Blog</a></li>
+      <li class = "latest-work"><a href="#">Latest Work</a></li>
+    </ul>
+    <span id="social-icons">
+      <ul>
+        <li><a href="https://github.com/cyberpolin"><i class="fa fa-github fa-lg"></i></a></li>
+        <li><a href="https://mx.linkedin.com/in/cyberpolin
+"><i class="fa fa-linkedin fa-lg"></i></a></li>
+        <li><a href="https://twitter.com/cyberpolin"><i class="fa fa-twitter fa-lg"></i></a></li>
+        <li><a href="https://www.facebook.com/carlos.vasconcelos"><i class="fa fa-facebook fa-lg"></i></a></li>
+      </ul>
+    </span>
+  </nav>
+  <main>
+  <h1>Enumerable methods, looping on steroids</h1>
+
+
+<p>If you are researching about enumerable in Ruby you know about loops already, if you don’t have a very good grasp of loops, take a look at <a href="http://www.tutorialspoint.com/ruby/ruby_loops.htm">loops in ruby</a>.</p>
+
+<p>So you already mastered loops in Ruby, or at least you think that, i bet you when you finish this post you are going to see loops and Ruby in a different way. Enumerable module is a collection of classes, but you can think of them as a collection of loop methods.</p>
+
+i’m sure you remember well enough how to iter an array.</p>
+<pre><code class="ruby">array = [“item1”, “item2”, “item3”]
+array.each do |x|
+  puts x
+end
+#output
+item1
+item2
+item3
+</pre>
+
+<p>So that is a way of iter an array (you can do it on  a hash too), and an enumerable method works the same way, in fact every object that can be iter by each can also call a enumerable method on it.</p>
+
+<p>So enumerables are a way to iter arrays and hashes, but you can do a little twist to them. Why? because they help us saving a lot of keystrokes and eventually making us as developers more efficient. So now you know what they are, let's try the most used ones.</p>
+
+
+
+<pre><code class="ruby">
+array = [“item1”, “item2”, “item3”]
+
+array.each {|x| puts x}
+#output
+item1
+item2
+item3
+</pre>
+<p>Did you note that is the same example i did above?
+easier right?</p>
+
+<p>So what if i want to know if that array have any given item?</p>
+
+<pre><code class="ruby">
+array.each {|x| puts x if x == “item3”}
+
+#output
+item3
+</pre>
+<p>Or we can always do this :)</p>
+
+<pre><code class="ruby">
+array.member(“item3”)
+</pre>
+<p>Great right?</p>
+
+<p>Ok lets imagine we want a counter…</p>
+
+<pre><code class="ruby">
+counter = 0
+array.each { |x| counter +=1
+puts counter
+}
+
+#output
+1
+2
+3
+
+</pre>
+<p>Or do this…</p>
+
+<pre><code class="ruby">
+array.inject{|counter, x| counter += 1}
+</pre>
+
+<p>As you can see enumerable  module will enhance us as better or quicker developers, they are a lot of methods in this collection, so , my advice to you is to read the <a href="http://ruby-doc.org/core-2.3.0/Enumerable.html">docs</a>, and try at least  everyone at least once!
+</p>
+
+
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://cyberpolin.github.io/blog/enumerable-methods.html" data-text="So that's what enumerable methods are... looping on steroids via @cyberpolin" data-size="large" data-related="cyberpolin">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</main>
+</body>
+</html>

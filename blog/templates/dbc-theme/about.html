@@ -1,0 +1,35 @@
+{% extends 'dbc-theme/base.html' %}
+
+
+{% block content%}
+
+<h1>I am Carlos Gonzalez...</h1>
+
+  <img class="me" alt="Carlos Gonzalez - web developer" src="/static/imgs/about-carlos-gonzalez-web-developer.png"><p>I’m from Mexico, precisely <a href="https://www.google.com.mx/maps/place/Tabasco/@17.9499938,-93.680058,8z/data=!3m1!4b1!4m2!3m1!1s0x85edfb5f8f78cb4f:0xd426cb11d9866b44">Tabasco</a> (nothing to do with the sauce). I’m a 35 years old developer, happily married with a kid who’s the love of my live.</p>
+
+  <p>Graduated from UVM with a Computer Science bachelor degree, i have almost 10 years in the IT field, have worked for several companies in Mexico and my last job was as a developer group leader in <a href="http://tabasco.gob.mx/">Tabasco Government</a>, i worked 3 years, and had a really good experience about it.</p>
+
+  <p>Now a days i’m taking <a href="http://devbootcamp.com/">Dev Boot Camp</a> course in San Francisco where i will learn a full stack developer skills like: <span class="skill">HTML</span> <span class="skill">CSS</span> <span class="skill">Javascript</span> <span class="skill">TDD</span> <span class="skill">Ruby</span> <span class="skill">Rails</span> <span class="skill">Git</span> but the most of all to become an all around developer.</p>
+
+  <p>So i’ll be available to work until July 1, looking to work remotely but ready to move if is necessary, here you can find some projects, so if you like what you see and you are interested in hiring me please let me know, i’ll be thrilled to work with you.</p>
+
+  <aside>
+    <h2>Lets get in touch...</h2>
+    <div id="contact-info">
+      <ul class="fa-ul">
+        <li><i class="fa-li fa fa-envelope"></i><a href="mailto:cyberpolin@gmail.com">cyberpolin@gmail.com</a></li>
+        <li><i class="fa-li fa fa-phone-square"></i><a href="tel:+529931175435"></a>+52 993.1.175.435</li>
+        <li><i class="fa-li fa fa-facebook-square"></i><a href="">facebook</a></li>
+        <li><i class="fa-li fa fa-linkedin-square"></i><a href="">linked In</a></li>
+      </ul>
+    </div>
+    <div id="mail-me">
+      <form method = "POST" action = "/hire-me.do">
+        <input name="name" type = "text" required placeholder = "What's you name?">
+        <input name="mail" type="email" required placeholder = "your@email.com">
+        <textarea name="comment" placeholder = "What do you have in mind? Press enter when your done."></textarea>
+      </form>
+    </div>
+  </aside>
+
+{% endblock %}
