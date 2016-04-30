@@ -35,6 +35,7 @@ def article_view(request, slug):
     p = Publicacion.objects.get(slug=slug)
     op = Publicacion.objects.order_by('?')[:10]
     ctx['contenido'] = p
+    ctx['title'] = p.titulo+' - '
     ctx['op'] = op
     return render(request, 'dbc-theme/article.html', ctx)
 
