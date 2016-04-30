@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans|Lobster' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+<!-- Syntax highlight -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Syntax highlight -->
+  <title>Variable, from singular to general - Cyberpolin's blog</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="home"><a href="http://cyberpolin.github.io/">Home</a></li>
+      <li class="about-me"><a href="../about.html">About me</a></li>
+      <li class="blog"><a href="http://cyberpolin.github.io/blog/index.html">Blog</a></li>
+      <li class = "latest-work"><a href="#">Latest Work</a></li>
+    </ul>
+    <span id="social-icons">
+      <ul>
+        <li><a href="#"><i class="fa fa-github fa-lg"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin fa-lg"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
+        <li><a href="#"><i class="fa fa-facebook fa-lg"></i></a></li>
+      </ul>
+    </span>
+  </nav>
+  <main>
+  <h1> Variable from singular to general scope</h1>
+
+
+<h2>Do you know what a variable is?</h2>
+
+  <p>I guess so, but if you don’t let me explain you really fast, a name is variable, and that’s that!</p>
+
+<p>Ok is not that simple… but it is, name is a variable, for example my <pre><code class="ruby"> name = “Carlos” </code></pre> and i’m <pre><code class="ruby"> age= 35</code> years old. You see a name is a variable, an age is a variable so, what’s your name?, what's your age?</p>
+
+<p>You see! name is a variable, age is a variable, at the end a variable is a placeholder for any value, the last two we use are different types of variable, name is a String (string of characters), the age variable is a Int (integer number) pretty simple right?</p>
+
+<p>So those are the most basic types of variables, and every kind of variables goes from this two. A Int could also be a Float (floating number) for example <pre><code class="ruby">age = 35.3</code>. You see how i add a floating point in it? That is the different, but they are in the most basically sort of way the same. (Please bare with me for explaining purposes).</p>
+
+<p>Any way, if i want to now my age in a ruby program i would write something like <pre><code class="ruby">puts age</code>, that would print my age, or at least the value of it so…</p>
+
+35.3
+
+<p>And if i want to know my name?
+Your right!</p>
+
+<pre><code class="ruby">puts name</code>
+
+Carlos
+
+<p>Now my name is not just “Carlos” so i need to update it.</p>
+<pre><code class="ruby">name = “Carlos Gonzalez”</code>
+
+<p>Well know i want to print my last name…
+mmm…</p>
+i can’t do that in a simple way, but just imagine that every single character has a number which i can access it…</p>
+
+<img src="../imgs/array-from-string.png" alt="array from string." width="40%" height="40%">
+
+<p>now if i want to print my last name i would write… ok lets make it simplier, i just want to print “G” so…</p>
+
+<pre><code class="ruby">puts name[7]</code>
+Got it?
+<pre><code class="ruby"> puts name[7]+name[8]+name[9]+name[10]+name[11]+name[12]+name[13]+name[14]</code>
+
+<p>That would write “Gonzalez” yeahhhhhh! So imagine we want that info in a variable.</p>
+
+<pre><code class="ruby">last_name = [G,o,n,z,a,l,e,z]</code>
+<p>The last one is an array, just like a String but with indexes. Yep those numbers are indexes so if i want to get only a G i need to access last_name[0], and so on, nice right.</p>
+
+<p>But there is more!</p>
+
+<p>The right way to write an array with string in it is <pre><code class="ruby">last_name = [“G”,”o”,”n”,”z”,”a”,”l”,”e”,”z”]</code> you see the cuotes is a way to tell ruby that i’m talking about strings or character, so i want to write my name and last name, but the <pre><code class="ruby">last_name[0]+last_name[1]...</code> code is not pretty at all.</p>
+
+<p>But we can do this…</p>
+
+<pre><code class="ruby">
+personal_info = [“Carlos”, “Gonzalez”]
+</code>
+
+<p>You see what i did? Yes i have both my name and last name in a single variable! Ruby is cooooooool!!</p>
+
+<p>So if i want to print my personal info i can do</p>
+
+<pre><code class="ruby">
+puts personal_info[0]
+puts personal_info[1]
+puts age
+</code>
+
+<p>That way i print all my info, but if i want to save my age to in the same variable?</p>
+
+<pre><code class="ruby">
+personal_info = [“Carlos”, “Gonzalez”, 35]
+</code>
+or
+<pre><code class="ruby">
+personal_info = [“Carlos”, “Gonzalez”, 35.3]
+</code>
+
+<p>So the index 0 and 1 are String, the 2 is a Int or a Float.</p>
+<p>You see an array can have different kinds of variable even an array itself, but we see that later.</p>
+<p>So in this way we car do something like this…</p>
+
+<pre><code class="ruby">puts “Hi i’m a #{personal_info[2]} years old programer my name is #{personal_info[0]} #{personal_info[1]}</code>
+
+<p>That would write “Hi i’m a 35 years old programer my name is Carlos Gonzalez”</p>
+
+<p>Nice right but i want to save not just only my name, but my  address, height, weight, skills in would be difficult to access them by indexes right?</p>
+
+<p>how about this…</p>
+
+<pre><code class="ruby">puts “Hi i’m a #{personal_info[‘age’]} years old programer my name is #{personal_info[‘name’]} #{personal_info[‘last_name’]} i live in #{personal_info[‘country’]}, i am #{personal_info[‘height’]} height etc…”</code>
+
+<p>You get the idea! cool right, that kind of variable is called a hash! and like array it can contain String, Int, Float, Array, even Hashes itself.</p>
+
+<p>So how you declare a hash?</p>
+
+<pre><code class="ruby">
+  personal_info = { “name” => “Carlos”, “last_name” => “Gonzalez”, “age” => 35, “country” => “MX”, “an_array” => [1,2,3,”Yeap an array”, “inside a hash”]}
+</code>
+
+<p>Cooool</p>
+<p>Programing is gooood!</p>
+
+<iframe src="http://giphy.com/embed/12WZ4dHjXBMUms" width="480" height="268" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+<h2>What we learn?</h2>
+
+<p>We learn in a really fast way what is a variable, and that variables have different types like Int, String, Float, Array, Hash. And some simple ways to use them, there are more ways to access them and even declare them but we will see that later, meanwhile enjoy developing.</p>
+
+<p>If you like this pleas share it...</p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://cyberpolin.github.io/blog/arrays-hashes.html" data-text="What to learn about arrays and hashes? via @cyberpolin" data-size="large" data-related="cyberpolin">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</main>
+</body>
+</html>

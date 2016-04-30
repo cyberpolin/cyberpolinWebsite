@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans|Lobster' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="/static/stylesheets/default.css">
+  {% if category = 'home' %}
+
+  {% else %}
+    <link rel="stylesheet" type="text/css" href="/static/stylesheets/blog.css">
+<link rel="stylesheet" type="text/css" href="/static/stylesheets/about.css">
+
+  {% endif %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <!-- Syntax highlight -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Syntax highlight -->
+  <script type="text/javascript">
+    // jQuery functions
+    // Show mini-menu
+    $(document).ready(function(){
+      $("#mini-menu").click(function(){
+        $("#menu").slideToggle();
+      });
+    });
+  </script>
+  <title>Ruby on Rails & Django Full Stack Developer - Cyberpolin's website</title>
+</head>
+<body>
+
+
+  {% include "dbc-theme/menu.html" %}
+
+<main>
+  {% block content %}{% endblock %}
+</main>
+</body>
+</html>

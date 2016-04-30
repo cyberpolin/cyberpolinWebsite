@@ -1,0 +1,44 @@
+main{
+  margin-top: 80px;
+  text-align: left;
+}
+aside h2{
+  margin-top: 1em;
+  padding: 1em 0;
+  border-bottom: 1px solid #d5e3ff;
+}
+aside div{
+  display: inline-block;
+}
+aside form{
+  padding: 2em 10%;
+}
+form input, form textarea{
+  width: 95%;
+  padding:0.3em;
+  border:1px solid #d5e3ff;
+  border-radius:5px;
+  background: #EEE;
+  font-size: 80%;
+  margin:.5em;
+}
+.me{
+  margin:0em 10%;
+  border:1px #000 solid;
+  border-radius: 10px;
+  float: left;
+}
+.skill{
+  border:1px solid #d5e3ff;
+  border-radius: 5px;
+  background: #F8E8FF;
+  padding: .2em;
+  font-size: 80%;
+}
+#contact-info{
+  border-right: 1px solid #d5e3ff;
+  width: 40%;
+}
+#contact-info ul{
+  margin:2em 35%;
+}

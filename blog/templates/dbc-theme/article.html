@@ -1,0 +1,12 @@
+{% extends 'dbc-theme/base.html' %}
+
+{% block content%}
+
+{% autoescape off %}
+<h1>
+  {{ contenido.titulo }}
+</h1>
+  {{contenido.texto}}
+   {{ pagina.texto }}
+{% endautoescape %}
+{% endblock %}

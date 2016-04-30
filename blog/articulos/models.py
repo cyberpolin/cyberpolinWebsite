@@ -32,19 +32,19 @@ class Media(models.Model):
     description = models.CharField(max_length=100, null = True)
     date = models.DateField(auto_now_add=True)
     latlon = models.CharField(max_length=50, null = True)
-    file = models.ImageField(storage = fs)
+    file = models.ImageField()
 
     def save(self):
 
         if not self.id and not self.file:
-            return            
+            return
 
         super(Media, self).save()
 
         image = Image.open(self.file)
         (width, height) = image.size
 
-        "Max width and height 800"        
+        "Max width and height 800"
         if (800 / width < 800 / height):
             factor = 800 / height
         else:
@@ -66,7 +66,7 @@ class Publicacion(models.Model):
     tipo = models.ForeignKey(Tipo, default=2)
     fecha = models.DateField(auto_now_add=True)
     status = models.BooleanField(default=True)
-    #tag = models.ForeignKey(Tags, db_constraint = False, related_name='etiquetas', blank=True, default=None)
+    img = models.ImageField(storage=fs)
 
     def save(self, *args, **kwargs):
         if not self.id:
