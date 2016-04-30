@@ -58,11 +58,13 @@ class Media(models.Model):
     def __str__(self):
         return str(self.file)
 
+from froala_editor.fields import FroalaField
 
 class Publicacion(models.Model):
     slug = models.SlugField()
     titulo = models.CharField(max_length=250)
-    texto = models.TextField()
+    # texto = models.TextField()
+    texto = FroalaField()
     tipo = models.ForeignKey(Tipo, default=2)
     fecha = models.DateField(auto_now_add=True)
     status = models.BooleanField(default=True)
