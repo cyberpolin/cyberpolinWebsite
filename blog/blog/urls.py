@@ -14,5 +14,6 @@ urlpatterns = patterns('',
     url(r'^', include('front_end.urls')),
     url(r'^admin/', include('articulos.urls')),
     url(r'^caronte/', include(admin.site.urls)),
+    url(r'^froala_editor/', include('froala_editor.urls')),
     url(r'^post/', PostView.as_view(), name='post'),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
