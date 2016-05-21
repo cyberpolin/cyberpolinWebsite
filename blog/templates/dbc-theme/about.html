@@ -46,6 +46,7 @@
     $(document).ready(function(){
       $('#mail-me').on('submit', 'form', function(e){
         e.preventDefault();
+        $(this).find("input[type=submit]").attr("disabled","disabled");
         $.ajax({
           url:$(this).attr('action'),
           method:$(this).attr('method'),
@@ -54,7 +55,6 @@
         })
         .done(function(response){
           if (response){
-            alert(response);
             $(this).hide();
             $('#thank-you').show();
           }

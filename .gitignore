@@ -1,5 +1,5 @@
 #Archivos pre-compilados
-.pyc
+*.pyc
 
 # Distribution / packaging
 .Python
@@ -17,3 +17,6 @@ docs/_build/
 
 # PyBuilder
 target/
+
+#Data Base
+*.sqlite3
