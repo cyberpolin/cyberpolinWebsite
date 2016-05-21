@@ -42,3 +42,6 @@ form input, form textarea{
 #contact-info ul{
   margin:2em 35%;
 }
+#thank-you{
+  display: none;
+}
