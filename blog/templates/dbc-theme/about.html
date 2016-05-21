@@ -24,12 +24,44 @@
       </ul>
     </div>
     <div id="mail-me">
-      <form method = "POST" action = "/hire-me.do">
+      <div id="thank-you">
+        <h2 class=portfolioTittle>Thank You...</h2>
+
+        <p class="description">I'll be glad to work in your project, lets hope to have fun and make a great product.</p>
+
+        <p> you will receive a mail from me soon, meanwhile have a nice day...</p>
+      </div>
+      <form method = "POST" action = "/hire-me-do/">
+        {% csrf_token %}
         <input name="name" type = "text" required placeholder = "What's you name?">
-        <input name="mail" type="email" required placeholder = "your@email.com">
-        <textarea name="comment" placeholder = "What do you have in mind? Press enter when your done."></textarea>
+        <input name="email" type="email" required placeholder = "your@email.com">
+        <textarea name="email_text" placeholder = "What do you have in mind?"></textarea>
+        <input type="submit" value="Let's do it">
       </form>
     </div>
   </aside>
+<script type="text/javascript">
+    // jQuery functions
+    // Show mini-menu
+    $(document).ready(function(){
+      $('#mail-me').on('submit', 'form', function(e){
+        e.preventDefault();
+        $.ajax({
+          url:$(this).attr('action'),
+          method:$(this).attr('method'),
+          data: $(this).serialize(),
+          context: $(this)
+        })
+        .done(function(response){
+          if (response){
+            alert(response);
+            $(this).hide();
+            $('#thank-you').show();
+          }
 
+
+        });
+      });
+    });
+  </script>
 {% endblock %}

@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-
+from django.http import HttpResponse
 from django.shortcuts import render
 from articulos.models import *
 
@@ -50,8 +50,10 @@ def send_mail_view(request):
     name = post['name']
     email = post['email']
     mail = email + '''
-    ''' + post['mail']
+    ''' + post['email_text']
 
     send_mail(''+ name +' want to hire you', mail, email,
         [settings.EMAIL_HOST_USER], fail_silently=False)
-    return render(request, 'frontEnd/hire-me-do.html')
+    # return render(request, 'dbc-theme/hire-me-do.html')
+    return HttpResponse('true')
+
