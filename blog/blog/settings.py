@@ -98,14 +98,14 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-    '/var/www/static/',
+    '/home/django/cyberpolinWebsite/blog/static',
 ]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = '/media/'
 
 MEDIAFILES_DIRS = [
     os.path.join(BASE_DIR, "media"),
-    '/var/www/media/',
+    '/home/django/cyberpolinWebsite/blog/static',
 ]
 
 

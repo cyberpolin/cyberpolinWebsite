@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
-<!-- saved from url=(0036)http://cyberpolin.com/static/resume/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Resume of Carlos Gonzalez</title>
@@ -648,9 +649,9 @@ a[href]:after {
           <div id="photo-header" class="text-center">
             <!-- PHOTO (AVATAR) -->
             <div id="photo">
-              <img src="http://cyberpolin.com/static/imgs/carlos-gonzalez-web-developer.png" alt="avatar">
+              <img src="http:&#x2F;&#x2F;cyberpolin.com&#x2F;static&#x2F;imgs&#x2F;carlos-gonzalez-web-developer.png" alt="avatar">
             </div>
-            <div id="text-header">
+            <div id="text-header" >
               <h1>Carlos Gonzalez<br><span>Full Stack Developer</span></h1>
             </div>
           </div>
@@ -665,66 +666,15 @@ a[href]:after {
           </div>
           <!-- WORK EXPERIENCE -->
           <div class="box">
-            <h2><i class="fa fa-suitcase ico"></i> Work Experience</h2>
-              <div class="job clearfix">
-                <div class="row">
-                  <div class="details">
-                    <div class="where">Freelancer</div>
-                    <div class="address">
-                      <a href="http://cyberpolin.com/" target="_blank"><i class="fa fa-globe ico"></i> http://cyberpolin.com/</a>
-                    </div>
-                    <div class="year">August 2016 – Today</div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="job-details col-xs-11">
-                    <div class="profession">Developer</div>
-                    <div class="description">
-                      Since I return from SF i started my work as a consultant in some local business, and also for some IT business all over Mexico. Did some jobs for upwork clients.
-
-                      One of my passions is teach so right now I have a developer learning from me.
-
-                      I have done a lot of work with JS, Django, and mobile, using both react native and appcelerator.
-                    </div>
-                    <br>
-	                <div class="profession">As a consultant...</div>
-	                   <div class="description">
-	                   <a href="https://creaturviajes.com">
-                        Creatur </a> is one of the best travel agencys in Mexico, they ask me to improve their Developer Team, help them refactor their's administration software. And develope a new product which is going to be a car rental application(we are using react for this)
-                        </div>
-	                  <div class="highlights">Projects</div>
-                    <ul class="list-group">
-                      <li class="list-group-item"><a href="https://itunes.apple.com/mx/app/creatur-15/id1067588858?mt=8">Creatur 15 </a> - This is a mobile app for both IOS & Android where you as a prospect can find trips of your interest, and as a client can watch your intinerary, it also have a small social media sectio where you can share photos with your travel partners.</li>
-                      <li class="list-group-item"><a href="https://itunes.apple.com/mx/app/embajadores-creatur/id1180730599?mt=8">Embajadores Creatur </a> - Creatur Embassadors is an app where you can refer your friends, and you earn points for it, it has a top list of top emmbasadors, it have a complete integration with aws push notification, facebbok API, Whats app, and twillio.</li>
-                      <li class="list-group-item"><a href="https://github.com/kondoSoft/react-car-rental">Creatur Rent a car </a> - This application is <b>under development</b> is a full react.js app and has a django API as backend, this app takes several providers such as hertz, alamo etc. from different data sources and integrate them to be consume by a react.js(react boilerplate) front end</li>
-                  </ul>
-                  <div class="profession">Other projects</div>
-	                  <div class="highlights">React</div>
-                    <ul class="list-group">
-                      <li class="list-group-item"><a href="https://itunes.apple.com/us/app/kondo-invaders/id1195679561?ls=1&mt=8">Kondo Invaders</a> - Is the first game I publish, it's coded using JS and phaser framework, the hole game is coded from scratch, and the art was made completely by a team I lead.<a href='https://github.com/kondoSoft/invaders-mobile'>Git</a></li>
-                      <li class="list-group-item"><a href="https://github.com/kondoSoft/invaders-mobile/tree/develop">Kondo Capitalism</a> - A React Native game, a clone of adventure capitalism and a work in progress, still need to add art.</li>
-                      <li class="list-group-item"><a href="https://github.com/kondoSoft/invaders-mobile/tree/develop">Tabasco Rinde Cuentas</a> - Is a government tools made with react.js it helps to show the state governmet expenses in real time with a firebase connection</li>
-                      <li class="list-group-item"><a href="https://www.rentgene.com/">Rentgene</a> - This project came to me from a previous developer, I fix a lot of bugs and make the <a href='https://www.rentgene.com/add/rooms'>Photo uploader</a> using Sagas, also deploy it on aws using s3 buckets and react boilerplate</li>
-                      <li class="list-group-item"><a href="http://online-store.cyberpolin.com/">Online store</a> - I follow Wess Boss tutorial for building an online store and add a firebase connection</li>
-                      <li class="list-group-item"><a href="http://twitter.cyberpolin.com/">Twitter Conection</a> - This was my first approach into JS & node development, is a twitter API reader that follows twitter main stream and push it into the browser using websockets, if the tweet have geolocation it paint it into the map, It is using web sockets and express.</li>
-
-                  </ul>
-                  </div>
-                </div>
-              </div>
-
-
-
-
-
+            <h2><i class= "fa fa-suitcase ico"></i> Work Experience</h2>
               <div class="job clearfix">
                 <div class="row">
                   <div class="details">
                     <div class="where">Dev Bootcamp</div>
                     <div class="address">
-                      <a href="http://devbootcamp.com/" target="_blank"><i class="fa fa-globe ico"></i> http://devbootcamp.com/</a>
+                      <a href="http://devbootcamp.com/" target= "_blank"><i class="fa fa-globe ico"></i> http://devbootcamp.com/</a>
                     </div>
-                    <div class="year">April 2016 – August 2016</div>
+                    <div class="year">April 2016 – Today</div>
                   </div>
                 </div>
                 <div class="row">
@@ -746,7 +696,7 @@ a[href]:after {
                     <div class="details">
                       <div class="where">Tabasco State Government</div>
                       <div class="address">
-                        <a href="http://tabasco.gob.mx/" target="_blank"><i class="fa fa-globe ico"></i> http://tabasco.gob.mx/</a>
+                        <a href="http:&#x2F;&#x2F;tabasco.gob.mx&#x2F;" target= "_blank"><i class="fa fa-globe ico"></i> http:&#x2F;&#x2F;tabasco.gob.mx&#x2F;</a>
                       </div>
                       <div class="year">December 2013 – March 2016</div>
                     </div>
@@ -775,7 +725,7 @@ a[href]:after {
                       <div class="details">
                         <div class="where">Freelancer</div>
                         <div class="address">
-                          <a href="http://utopiaw.com/" target="_blank"><i class="fa fa-globe ico"></i>http://utopiaw.com/</a>
+                          <a href="http://utopiaw.com/" target= "_blank"><i class="fa fa-globe ico"></i>http://utopiaw.com/</a>
                         </div>
                         <div class="year">2005 – Decembert 2012</div>
                       </div>
@@ -787,7 +737,7 @@ a[href]:after {
                           As an entrepreneur, I did projects in HTML, CSS, and PHP. I provided account management and was responsible for all client facing activities, including sales, billing, and accounting.
                           <div class="highlights">Projects</div>
                           <ul class="list-group">
-                            <li class="list-group-item"><a href="http://creaturviajes.com/">Creatur Viajes</a> is one of the travel lider companies in Tabasco, Mexico, they sell travel bundles to other travel companies in Mexico. The website has a custom Wordpress theme and a especially builded search plugin. Also I put together and train a group of developers for this company, they started with one developer, today they have a small team of 5 members maintaining and ERP that we build.<br>The stack Creatur Viajes have is Python + Django + Postgres SQL, also a mobile application made in Titanium Appcelerator.</li>
+                            <li class="list-group-item"><a href="http://creaturviajes.com/">Creatur Viajes</a> is one of the travel lider companies in Tabasco, Mexico, they sell travel bundles to other travel companies in Mexico. The website has a custom Wordpress theme and a especially builded search plugin. Also I put together and train a group of developers for this company, they started with one developer, today they have a small team of 5 members maintaining and ERP that we build.</br>The stack Creatur Viajes have is Python + Django + Postgres SQL, also a mobile application made in Titanium Appcelerator.</li>
                             <li class="list-group-item"><a href="http://www.colegioingles.edu.mx/">Colegio Ingles de Villahermosa</a> WordPress website, I focused on Search Engine Optimization (SEO), which is a series of techniques were a site use certain especial words or phrases so it get a better ranking on google, or others Search Engines.</li>
 
                           </ul>
@@ -798,14 +748,14 @@ a[href]:after {
           </div>
           <!-- VOLUNTEER -->
           <div class="box">
-            <h2><i class="fa fa-group ico"></i> Volunteer</h2>
+            <h2><i class= "fa fa-group ico"></i> Volunteer</h2>
               <div class="job clearfix">
                 <div class="row">
                   <div class="details">
                     <div class="where">Python Tabasco</div>
                     <div class="address">
-                      <a href="https://www.facebook.com/groups/PythonTabasco/" target="_blank"><i class="fa fa-globe ico"></i> https://www.facebook.com/groups/PythonTabasco/</a>
-                    <br><a href="https://github.com/PythonTabasco" target="_blank"><i class="fa fa-globe ico"></i> https://github.com/PythonTabasco</a>
+                      <a href="https:&#x2F;&#x2F;www.facebook.com&#x2F;groups&#x2F;PythonTabasco&#x2F;" target= "_blank"><i class="fa fa-globe ico"></i> https:&#x2F;&#x2F;www.facebook.com&#x2F;groups&#x2F;PythonTabasco&#x2F;</a>
+                    </br><a href="https://github.com/PythonTabasco" target= "_blank"><i class="fa fa-globe ico"></i> https://github.com/PythonTabasco</a>
                     </div>
                     <div class="year">January 2016 – Present</div>
                   </div>
@@ -835,21 +785,21 @@ In this study group we cover the basics of Python 3 like; basic syntax, conditio
             </div>
             <div class="contact-item">
               <div class="icon pull-left text-center"><span class="fa fa-envelope fa-fw"></span></div>
-              <div class="title only pull-right"><a href="mailto:cyberpolin@gmail.com" target="_blank">cyberpolin@gmail.com</a></div>
+              <div class="title only pull-right"><a href="/cdn-cgi/l/email-protection#1a7963787f686a757673745a7d777b737634797577" target="_blank"><span class="__cf_email__" data-cfemail="81e2f8e3e4f3f1eeede8efc1e6ece0e8edafe2eeec">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a></div>
             </div>
             <div class="contact-item">
               <div class="icon pull-left text-center"><span class="fa fa-globe fa-fw"></span></div>
-              <div class="title only pull-right"><a href="https://cyberpolin.com/" target="_blank">https://cyberpolin.com</a></div>
+              <div class="title only pull-right"><a href="https:&#x2F;&#x2F;cyberpolin.com" target="_blank">https:&#x2F;&#x2F;cyberpolin.com</a></div>
             </div>
             <div class="contact-item">
               <div class="icon pull-left text-center"><span class="fa fa-twitter-square fa-fw"></span></div>
               <div class="title pull-right">Twitter</div>
-              <div class="description pull-right"><a href="http://cyberpolin.com/static/resume/" target="_blank">cyberpolin</a></div>
+              <div class="description pull-right"><a href="" target="_blank">cyberpolin</a></div>
             </div>
             <div class="contact-item">
               <div class="icon pull-left text-center"><span class="fa fa-linkedin-square fa-fw"></span></div>
               <div class="title pull-right">linkedin</div>
-              <div class="description pull-right"><a href="https://www.linkedin.com/in/cyberpolin" target="_blank">cyberpolin</a></div>
+              <div class="description pull-right"><a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;cyberpolin" target="_blank">cyberpolin</a></div>
             </div>
           </div>
           <!-- SKILLS -->
@@ -860,16 +810,15 @@ In this study group we cover the basics of Python 3 like; basic syntax, conditio
                   Full Stack Developer
               </div>
               <div class="col-sm-offset-1 col-sm-12 clearfix">
-                <span class="skill badge">HTML</span>
-                <span class="skill badge">CSS</span>
-                <span class="skill badge">Javascript</span>
-                <span class="skill badge">Ruby on Rails</span>
-                <span class="skill badge">Python + Django</span>
-                <span class="skill badge">Node.js</span>
-                <span class="skill badge">Express.js</span>
-                <span class="skill badge">React Native</span>
-                <span class="skill badge">React.js + Redux + Sagas</span>
-                <span class="skill badge">SEO</span>
+                <span class= "skill badge">HTML</span>
+                <span class= "skill badge">CSS</span>
+                <span class= "skill badge">Javascript</span>
+                <span class= "skill badge">Ruby on Rails</span>
+                <span class= "skill badge">Python + Django</span>
+                <span class= "skill badge">Node.js</span>
+                <span class= "skill badge">Express.js</span>
+                <span class= "skill badge">React Native</span>
+                <span class= "skill badge">SEO</span>
               </div>
             </div>
             <div class="skills clearfix">
@@ -877,9 +826,9 @@ In this study group we cover the basics of Python 3 like; basic syntax, conditio
                   Project Manager
               </div>
               <div class="col-sm-offset-1 col-sm-12 clearfix">
-                <span class="skill badge">Leadership</span>
-                <span class="skill badge">Scrum Master Certified</span>
-                <span class="skill badge">Open Government</span>
+                <span class= "skill badge">Leadership</span>
+                <span class= "skill badge">Scrum Master Certified</span>
+                <span class= "skill badge">Open Government</span>
               </div>
             </div>
           </div>
@@ -888,7 +837,7 @@ In this study group we cover the basics of Python 3 like; basic syntax, conditio
           <div class="box">
             <h2><i class="fa fa-university ico"></i> Education</h2>
             <ul id="education" class="clearfix">
-
+              </li>
               <li>
                 <div class="year pull-left">2016 2016</div>
                 <div class="description pull-right">
@@ -901,11 +850,11 @@ In this study group we cover the basics of Python 3 like; basic syntax, conditio
                 <div class="year pull-left">1998 2014</div>
                 <div class="description pull-right">
                   <h3>University of Veracruz</h3>
-                  <p><i class="fa fa-graduation-cap ico"></i> Bachelor</p>
+                  <p><i class= "fa fa-graduation-cap ico"></i> Bachelor</p>
                   <p>Computer Science</p>
                 </div>
 
-            </li></ul>
+            </ul>
           </div>
           <!-- LANGUAGES -->
           <div class="box">
@@ -919,11 +868,9 @@ In this study group we cover the basics of Python 3 like; basic syntax, conditio
       </div>
     </div>
     <!-- JQUERY -->
-    <script src="./Resume of Carlos Gonzalez_files/jquery-2.1.1.min.js"></script>
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- BOOTSTRAP -->
-    <script src="./Resume of Carlos Gonzalez_files/bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-  <script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script>
-
-</body></html>
-
+  <script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
